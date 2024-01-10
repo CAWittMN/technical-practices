@@ -8,7 +8,8 @@
 const rotateInPlace = (nums, k) => {
   // get the index where the array will be spliced
   let spliceIdx = nums.length - k;
-  // if the spliceIdx is negative, add the length of the array to it.
+  // if the spliceIdx is negative, add the length of the array to it until it's positive.
+  // note: this simulates the placement of the splice as if it looped back around the array if k > nums.length
   while (spliceIdx < 0) {
     spliceIdx += nums.length;
   }
